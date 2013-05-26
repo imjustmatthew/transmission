@@ -36,9 +36,9 @@ Attributes
 * `node["transmission"]["speed_limit_up_enabled"]` - Whether the upload limit is used, default `false`.
 
 The file also contains the following attribute types:
-
+* additional settings for transmisison.
 * platform specific locations and settings.
-* source installation settings
+* source installation settings.
 
 Resource/Provider
 =================

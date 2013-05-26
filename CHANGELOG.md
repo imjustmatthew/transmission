@@ -1,3 +1,4 @@
+* Exposed additional settings from Transmission
 ## v1.0.2:
 
 * [COOK-729] - `transmission_torrent_file` doesn't work for more than
