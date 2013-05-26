@@ -50,7 +50,7 @@ default['transmission']['peer_port']               = 51413
 default['transmission']['peer_port_random']        = 'false'
 default['transmission']['peer_port_random_min']    = 49152
 default['transmission']['peer_port_random_max']    = 65535
-default['transmission']['peer_socket_tos']         = 0
+default['transmission']['peer_socket_tos']         = "default"
 default['transmission']['peer_port_forward']       = 'false'
 
 default['transmission']['peer_exchange']    = 'true'
@@ -59,6 +59,7 @@ default['transmission']['rpc_enabled'] = 'true'
 default['transmission']['rpc_whitelist_enabled'] = 'true'
 default['transmission']['rpc_whitelist'] = '127.0.0.1'
 default['transmission']['rpc_bind_address'] = '0.0.0.0'
+default['transmission']['rpc_auth_required'] = 'true'
 default['transmission']['rpc_username']     = 'transmission'
 set_unless['transmission']['rpc_password']  = secure_password
 default['transmission']['rpc_port']         = 9091
