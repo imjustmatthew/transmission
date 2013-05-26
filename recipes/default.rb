@@ -67,11 +67,15 @@ end
 template "#{node['transmission']['config_dir']}/settings.json" do
   source "settings.json.erb"
   owner "root"
-  group "root"
-  mode "0644"
+  group node['transmission']['group']
+  mode node['transmission']['settings_mode']
   notifies :reload, "service[transmission]", :immediate
 end
 
-link "/etc/transmission-daemon/settings.json" do
-  to "#{node['transmission']['config_dir']}/settings.json"
+template "/etc/transmission-daemon/settings.json" do
+  source "settings.json.erb"
+  owner "root"
+  group node['transmission']['group']
+  mode node['transmission']['settings_mode']
+  notifies :reload, "service[transmission]", :immediate
 end

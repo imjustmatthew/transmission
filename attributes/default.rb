@@ -30,6 +30,11 @@ else
   default['transmission']['group']          = 'transmission'
 end
 
+default['transmission']['settings_mode']    = '660' #Controls the mode of settings.json
+                                                    # '660' allows the transmission daemon to update the settings, e.g. from the web interface
+                                                    # '640' only allows changes by root/chef
+                                                    # This file should never be world readable; it contains the RPC password.
+
 default['transmission']['url']              = 'http://download.transmissionbt.com/files'
 default['transmission']['version']          = '2.03'
 default['transmission']['checksum']         = '06802c6f4ba517341eb287b273145ccd5e7b0fba2a270da82f0eb0a683cf4046'
